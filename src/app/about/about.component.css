@@ -1,0 +1,45 @@
+header {
+    background-color: #0d1c23;
+    top: 0;
+    padding-top: 3em;
+    height: 384px;
+    text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 50px));
+}
+
+.heading {
+    color: #f1f1f1;
+    font-size: 4rem;
+    font-weight: bold;
+    animation-name: move-from-bottom;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+}
+
+.sub-heading {
+    color: #f1f1f1;
+    margin-top: 1.5em;
+    font-size: 2rem;
+    animation-name: move-from-bottom;
+    animation-duration: 1s;
+    animation-delay: .25s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+    opacity: 0.75 !important;
+}
+
+@media screen and (max-width: 455px) {
+    header {
+        padding-top: 4.5em;
+    }
+
+    .heading {
+        font-size: 2.75rem;
+    }
+    
+    .sub-heading {
+        margin-top: 2.5em;
+        font-size: 1.5em;
+    }
+}

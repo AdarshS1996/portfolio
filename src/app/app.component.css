@@ -1,0 +1,16 @@
+.router-outlet {
+    background-color: #f1f1f1;
+    margin: 0px 0px 0px 220px;
+}
+.footer {
+    margin: 0px 0px 0px 220px;
+}
+
+@media screen and (max-width: 899px) {
+    .router-outlet {
+        margin: 0px;
+    }
+    .footer {
+        margin: 0px;
+    }
+}

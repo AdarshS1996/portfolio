@@ -1,0 +1,118 @@
+header {
+    background-color: #0d1c23;
+    top: 0;
+    padding-top: 3em;
+    height: 384px;
+    text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 50px));
+}
+
+.heading {
+    color: #f1f1f1;
+    font-size: 4rem;
+    font-weight: bold;
+    animation-name: move-from-bottom;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+}
+
+.sub-heading {
+    color: #f1f1f1;
+    margin-top: 1.5em;
+    font-size: 2rem;
+    animation-name: move-from-bottom;
+    animation-duration: 1s;
+    animation-delay: .25s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+    opacity: 0.75 !important;
+}
+
+.project-section {
+    padding: 2em 0em 0em 0em;
+}
+
+.featured-project-heading {
+    font-size: 2em;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+hr {
+    padding-bottom: .75em;
+    width: 50%;
+}
+
+.row {
+    background-color: #f9f9f9;
+    clip-path: polygon(0 0, 100% calc(0% + 50px), 100% 100%, 0 calc(100% - 50px));
+    padding-top: 4rem;
+    padding-bottom: 6rem;
+}
+
+.card-margin-top {
+    margin-top: 2em;
+}
+
+.card {
+    border: none;
+    background-color: #f9f9f9;
+    border-radius: 2px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    transition: all 0.25s;
+}
+
+.card:hover {
+    background-color: #f1f1f1;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    transform: scale(1.01);
+}
+
+.service-heading-logo {
+    width: 4em;
+}
+
+.logo-margin {
+    margin-bottom: .25em !important;
+}
+
+.service-heading {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.service-sub-heading {
+  line-height: 1.75em;
+  text-indent: 1.5em;
+  text-align: justify;
+  font-size: 1.25em;
+  opacity: 0.6;
+}
+
+@media screen and (max-width: 768px) {
+    .card-margin-top {
+        margin-top: 2em;
+    }
+  }
+
+@media screen and (max-width: 455px) {
+    header {
+        padding-top: 4.5em;
+    }
+
+    .heading {
+        font-size: 2.75rem;
+    }
+    
+    .sub-heading {
+        margin-top: 2.5em;
+        font-size: 1.5em;
+    }
+
+    .featured-project-heading {
+        font-size: 1.5em;
+    }
+}

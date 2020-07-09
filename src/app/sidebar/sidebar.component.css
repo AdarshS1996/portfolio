@@ -1,0 +1,164 @@
+  .menu {
+    background: #d9b344;
+    height: 100vh;
+    width: 220px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    outline: none;
+  }
+  .menu .avatar {
+    background: #0d1c23;
+    padding: 3em 0.5em;
+    text-align: center;
+    margin-bottom: 1.25em;
+    -webkit-box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.5);
+    box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.5);
+    transition: all .3s;
+  }
+  .menu .avatar:focus {
+    outline: none;
+  }
+  .menu .avatar .avatar-image {
+    width: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: all 1s;
+    animation: move-from-top 1s;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
+  .menu .avatar .avatar-image:hover {
+    border-radius: 2px;
+  }
+  .menu .avatar h2 {
+    font-size: 18px;
+    padding: 1.5rem 0rem 1rem 0rem;
+    font-weight: normal;
+    margin-bottom: 0;
+    color: #f1f1f1;
+    animation: move-from-bottom 1s;
+  }
+  .social-icon {
+    width: 24px;
+    margin: 0em 0.75em;
+    animation: move-from-bottom 1s;
+  }
+  .menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .menu ul li {
+    padding: 1.25em 0.75em;
+    font-weight: regular;
+    background-repeat: no-repeat;
+    background-position: left 15px center;
+    transition: all 0.15s linear;
+    cursor: pointer;
+    background-size: 2rem;
+    margin: 0.5em;
+    border-radius: 2px;
+  }
+  .menu ul li span {
+    padding: 0rem 3.5rem;
+  }
+  .menu ul li.icon-home {
+    background-image: url("https://img.icons8.com/color/96/000000/home.png");
+  }
+  .menu ul li.icon-project {
+    background-image: url("https://img.icons8.com/color/96/000000/project.png");
+  }
+  .menu ul li.icon-service {
+    background-image: url("https://img.icons8.com/color/96/000000/service.png");
+  }
+  .menu ul li.icon-about {
+    background-image: url("https://img.icons8.com/color/96/000000/about.png");
+  }
+  .menu ul li.icon-contact {
+    background-image: url("https://img.icons8.com/color/96/000000/contacts.png");
+  }
+  .menu ul li.icon-mode {
+    background-image: url("https://img.icons8.com/color/96/000000/moon-symbol.png");
+  }
+  .menu ul li span {
+    animation: move-from-inside 1s;
+    animation-delay: .8s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+  }
+  @keyframes move-from-inside {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      visibility: visible;
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+  .menu ul li:hover {
+    background-color: #f1f1f1;
+    background-size: 2.3rem;
+    opacity: 0.9;
+  }
+  .menu ul li:focus {
+    outline: none;
+  }
+  .menu ul li.active {
+    background-color: #f1f1f1;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    background-size: 2.2rem;
+    opacity: 1 !important;
+  }
+  @media screen and (max-width: 899px) {
+    body {
+      padding-left: 0;
+    }
+    .menu {
+      width: 210px;
+      box-shadow: 0 0 0 100em rgba(0, 0, 0, 0);
+      transform: translate3d(-211px, 0, 0);
+      transition: all .25s ease-in-out;
+    }
+    .menu .smartphone-menu-trigger {
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      left: 100%;
+      background: #0d1c23;
+    }
+    .menu .smartphone-menu-trigger:before,
+    .menu .smartphone-menu-trigger:after {
+      content: '';
+      width: 50%;
+      height: 2px;
+      background: #f1f1f1;
+      border-radius: 10px;
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      transform: translate3d(-50%, -50%, 0);
+    }
+    .menu .smartphone-menu-trigger:after {
+      top: 55%;
+      transform: translate3d(-50%, -50%, 0);
+    }
+    .menu ul li {
+      padding: 1.25em 0.75em 1.25em 2em;
+      background-size: 2rem !important;
+    }
+    .menu ul li span {
+        padding: 0rem 2rem;
+    }
+    .menu:focus {
+      transform: translate3d(0, 0, 0);
+      box-shadow: 0 0 0 100em rgba(0, 0, 0, 0.6);
+    }
+    .menu:focus .smartphone-menu-trigger {
+      pointer-events: none;
+    }
+  }
+  

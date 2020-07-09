@@ -1,0 +1,225 @@
+header {
+    background-color: #0d1c23;
+    top: 0;
+    padding-top: 3em;
+    height: 768px;
+    text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 50px));
+}
+
+.heading {
+    color: #f1f1f1;
+    font-size: 4rem;
+    font-weight: bold;
+    animation-name: move-from-bottom;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+}
+
+.sub-heading {
+    color: #f1f1f1;
+    margin-top: .5em;
+    font-size: 2rem;
+    animation-name: move-from-bottom;
+    animation-duration: 1s;
+    animation-delay: .25s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+    opacity: 0.75 !important;
+}
+
+.profile-image {
+    width: 27.9em;
+    border-radius: 15rem;
+    margin-top: 1.5em;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    transition: all 1s;
+    animation-name: move-from-bottom;
+    animation-duration: 1s;
+    animation-delay: .5s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+}
+
+.profile-image:hover {
+    border-radius: 2px;
+}
+
+.swipe {
+    color: #f1f1f1;
+    margin-top: 3.5em;
+    visibility: hidden;
+    animation-name: bounce-swipe;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    animation-delay: .75s;
+}
+
+.swipe-down-arrow {
+    visibility: hidden;
+    animation-name: bounce-swipe;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    animation-delay: .75s;
+}
+
+@keyframes bounce-swipe {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-10px); }
+    100% { visibility: visible; transform: translateY(0); }
+}
+
+.project-section {
+    padding: 3em 0em 0em 0em;
+}
+
+.featured-project-heading {
+    font-size: 2em;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+hr {
+    padding-bottom: 1.4em;
+    width: 50%;
+}
+
+.row {
+    background-color: #f9f9f9;
+    clip-path: polygon(0 0, 100% calc(0% + 50px), 100% 100%, 0 calc(100% - 50px));
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.carousel-control-prev-icon {
+    height: 28px;
+    width: 28px;
+    background-image: url("https://img.icons8.com/ios/50/000000/back--v1.png");
+}
+
+.carousel-control-next-icon {
+    height: 28px;
+    width: 28px;
+    background-image: url("https://img.icons8.com/ios/50/000000/forward--v1.png");
+}
+
+  .project-heading {
+      font-size: 2em;
+  }
+
+  .project-sub-heading {
+    line-height: 1.75em;
+    text-indent: 1.5em;
+    text-align: justify;
+    font-size: 1.25em;
+    opacity: 0.6;
+    padding-top: .5em;
+  }
+
+  .project-icon {
+      width: 24px;
+  }
+
+  .button {
+    padding-top: 3em;
+    text-align: center;
+}
+
+.card {
+    border: none;
+    border-radius: 2px;
+    background-color: #f9f9f9;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    transition: all 0.25s;
+}
+
+.card:hover {
+    background-color: #f1f1f1;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    transform: scale(1.01);
+}
+
+.service-heading-logo {
+    width: 4em;
+}
+
+.logo-margin {
+    margin-bottom: .25em !important;
+}
+
+.service-heading {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.service-sub-heading {
+  line-height: 1.75em;
+  text-indent: 1.5em;
+  text-align: justify;
+  font-size: 1.25em;
+  opacity: 0.6;
+}
+
+.know-more-button {
+    text-align: center;
+}
+
+  @media screen and (max-width: 768px) {
+    .image-section {
+        height: 35vh;
+    }
+
+    .project-heading {
+        font-size: 1.5em;
+        padding-top: 1em;
+    }
+
+    .project-sub-heading {
+        font-size: 1.3em;
+    }
+
+    .service-heading {
+        font-size: 1.5em;
+    }
+    
+    .service-sub-heading {
+        font-size: 1.3em;
+    }
+
+    .card-margin-top {
+        margin-top: 3em;
+    }
+  }
+
+@media screen and (max-width: 455px) {
+    header {
+        padding-top: 4.5em;
+    }
+
+    .profile-image {
+        margin-top: 3em;
+        width: 18em;
+    }
+
+    .heading {
+        font-size: 2.75rem;
+    }
+    
+    .sub-heading {
+        margin-top: 1.5em;
+        font-size: 1.5em;
+    }
+
+    .swipe {
+        padding-top: 2.5em;
+    }
+
+    .featured-project-heading {
+        font-size: 1.5em;
+    }
+}

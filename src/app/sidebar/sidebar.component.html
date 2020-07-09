@@ -1,0 +1,20 @@
+<nav class="menu" tabindex="0">
+	<div class="smartphone-menu-trigger"></div>
+  <header class="avatar">
+		<img class="avatar-image" src="../../assets/profile.jpg"/>
+    <h2>Adarsh Srivastava</h2>
+    <div>
+      <a href="https://www.linkedin.com/in/adarsh-srivastava-0a35bb144" target="_blank"><img class="social-icon" src="https://img.icons8.com/color/96/000000/linkedin.png"/></a>
+      <a href="https://www.facebook.com/adarshsrivastava1996" target="_blank"><img class="social-icon" src="https://img.icons8.com/color/96/000000/facebook-new.png"/></a>
+      <a href="https://www.instagram.com/adst1996/" target="_blank"><img class="social-icon" src="https://img.icons8.com/color/96/000000/instagram-new.png"/></a>
+    </div>
+  </header>
+	<ul>
+    <li class="icon-home" [routerLink]="['']" [class.active]="url === '/'" routerLinkActive="active"><span>Home</span></li>
+    <li class="icon-project" [routerLink]="['projects']" [class.active]="url === '/projects'" routerLinkActive="active"><span>Projects</span></li>
+    <li class="icon-service" [routerLink]="['services']" [class.active]="url === '/services'" routerLinkActive="active"><span>Services</span></li>
+    <li class="icon-about" [routerLink]="['about']" [class.active]="url === '/about'" routerLinkActive="active"><span>About</span></li>
+    <li class="icon-contact" [routerLink]="['contact']" [class.active]="url === '/contact'" routerLinkActive="active"><span>Contact</span></li>
+    <li *ngIf="false" class="icon-mode" [routerLink]="['switch']" [class.active]="url === '/switch'" routerLinkActive="active"><span>Switch Mode</span></li>
+  </ul>
+</nav>

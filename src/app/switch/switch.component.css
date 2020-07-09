@@ -1,0 +1,156 @@
+header {
+    background-color: #0d1c23;
+    top: 0;
+    padding-top: 3em;
+    height: 384px;
+    text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 50px));
+}
+
+.heading {
+    color: #f1f1f1;
+    font-size: 4rem;
+    font-weight: bold;
+    animation-name: move-from-bottom;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+}
+
+.sub-heading {
+    color: #f1f1f1;
+    margin-top: 1.5em;
+    font-size: 2rem;
+    animation-name: move-from-bottom;
+    animation-duration: 1s;
+    animation-delay: .25s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+    opacity: 0.75 !important;
+}
+
+.project-section {
+    padding: 2em 0em 0em 0em;
+}
+
+.featured-project-heading {
+    font-size: 2em;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+hr {
+    padding-bottom: .75em;
+    width: 50%;
+}
+
+.more-projects {
+    justify-content: center;
+	text-align: center;
+	font-size: 1.25rem;
+}
+
+.row {
+    background-color: #f9f9f9;
+    clip-path: polygon(0 0, 100% calc(0% + 50px), 100% 100%, 0 calc(100% - 50px));
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.align-items {
+	display: flex;
+    justify-content: space-between;
+}
+
+.btn-toggle {
+	margin: 0 4rem;
+	padding: 0;
+	position: relative;
+	border: none;
+	height: 1.5rem;
+	width: 3rem;
+	border-radius: 1.5rem;
+	background: #d9b344;
+  }
+  .btn-toggle:focus,
+  .btn-toggle.focus,
+  .btn-toggle:focus.active,
+  .btn-toggle.focus.active {
+	outline: none;
+  }
+  .btn-toggle::before,
+  .btn-toggle::after {
+	line-height: 1.5rem;
+	width: 4rem;
+	text-align: center;
+	font-weight: 600;
+	font-size: 0.75rem;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	position: relative;
+	bottom: 0;
+	transition: opacity 0.25s;
+  }
+  .btn-toggle::before {
+	content: '';
+	position: absolute;
+	height: 2rem;
+	top: -2px;
+	background: url("https://img.icons8.com/ios/50/000000/sun.png") 0 0 no-repeat;
+	background-size: 2.3em;
+	left: -2.2rem;
+  }
+  .btn-toggle::after {
+	content: '';
+	position: absolute;
+	height: 2rem;
+	top: -2px;
+	background: url("https://img.icons8.com/ios/50/000000/moon-symbol.png") 0 0 no-repeat;
+	background-size: 2.3em;
+	right: -4.2rem;
+	opacity: 0.3;
+  }
+  .btn-toggle > .handle {
+	position: absolute;
+	top: 0.1875rem;
+	left: 0.1875rem;
+	width: 1.125rem;
+	height: 1.125rem;
+	border-radius: 1.125rem;
+	background: #fff;
+	transition: left 0.25s;
+  }
+  .btn-toggle.active {
+	background-color: #0d1c23;
+	transition: background-color 0.25s;
+  }
+  .btn-toggle.active > .handle {
+	left: 1.6875rem;
+	transition: left 0.25s;
+  }
+  .btn-toggle.active::before {
+	opacity: 0.3;
+  }
+  .btn-toggle.active::after {
+	opacity: 1;
+  }
+
+@media screen and (max-width: 455px) {
+    header {
+        padding-top: 4.5em;
+    }
+
+    .heading {
+        font-size: 2.75rem;
+    }
+    
+    .sub-heading {
+        margin-top: 2.5em;
+        font-size: 1.5em;
+	}
+	
+	.featured-project-heading {
+        font-size: 1.5em;
+    }
+}

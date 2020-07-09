@@ -1,0 +1,81 @@
+<header>
+    <div class="col-md-12">
+        <h2 class="heading">Contact</h2>
+    </div>
+    <div class="col-md-12">
+        <h2 class="sub-heading">If you'd like to work or want to discuss something with me please fill the below
+            form and I'll get back to you within 1-2 days.
+        </h2>
+    </div>
+</header>
+
+<section class="project-section">
+
+    <div class="col-md-12 featured-project-heading">
+        Contact form
+    </div>
+
+    <hr>
+    <form [formGroup]="contactForm">
+        <section class="row">
+
+            <div class="col-md-6 margin-bottom">
+                <label for="name">Name<span>*</span></label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><img class="form-logo"
+                                src="https://img.icons8.com/color/96/000000/name.png" /></span>
+                    </div>
+                    <input type="text" id="name" class="form-control" formControlName="name"
+                        [class.input-validation]="isFormSubmit && contactForm.controls.name.errors">
+                </div>
+                <div *ngIf="isFormSubmit && contactForm.controls.name.errors" class="validation-error">Name is required
+                </div>
+            </div>
+
+            <div class="col-md-6 margin-bottom">
+                <label for="email">Email<span>*</span></label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><img class="form-logo"
+                                src="https://img.icons8.com/color/96/000000/email.png" /></span>
+                    </div>
+                    <input type="text" id="email" class="form-control" formControlName="email"
+                        [class.input-validation]="isFormSubmit && contactForm.controls.email.errors">
+                </div>
+                <div *ngIf="isFormSubmit && contactForm.controls.email.errors" class="validation-error">Email is invalid
+                </div>
+            </div>
+
+            <div class="col-md-12 margin-bottom">
+                <label for="subject">Subject<span>*</span></label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><img class="form-logo"
+                                src="https://img.icons8.com/color/96/000000/open-envelope.png" /></span>
+                    </div>
+                    <input type="text" id="subject" class="form-control" formControlName="subject"
+                        [class.input-validation]="isFormSubmit && contactForm.controls.subject.errors">
+                </div>
+                <div *ngIf="isFormSubmit && contactForm.controls.subject.errors" class="validation-error">Subject is
+                    required</div>
+            </div>
+
+            <div class="col-md-12 form-group margin-bottom">
+                <label for="body">How can I help?</label>
+                <textarea class="form-control text-area" id="body" formControlName="body" placeholder="Write your message here..."></textarea>
+            </div>
+
+            <div class="col-md-12 button">
+                <app-button title="Send email" (click)="contactFormSubmit()">
+                </app-button>
+            </div>
+            <div class="col-md-12 success-alert" *ngIf="isSuccessAlert">
+                <div class="alert alert-success" role="alert">
+                    <img class="thumps-up" src="https://img.icons8.com/emoji/96/000000/thumbs-up.png"/>
+                    <div>Thank you for getting in touch! I'll get back to you in 1-2 days.</div>
+                </div>
+            </div>
+        </section>
+    </form>
+</section>
